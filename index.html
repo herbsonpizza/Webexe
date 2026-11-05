@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Webexe - Careers</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Webexe Careers</h1>
+<p align="center"><b>We are hiring web developers!</b></p>
+<p align="center"><a href="#company">About us</a> | <a href="#team">Our trainees</a> | <a href="#jobs">Jobs</a> | <a href="#apply">Apply</a> | <a href="#courses">Courses</a></p>
+<hr>
+
+<h2 id="company">About Webexe</h2>
+<p>Webexe builds websites for small businesses, charities and local organisations. We started in 2012 and now have 24 staff, including 6 trainee developers. Every new developer gets a mentor, one learning day a fortnight, and real client work from week two.</p>
+
+<h2 id="team">Our trainee web developers</h2>
+<ul>
+<li><b>Amira Khan</b> - BTEC Level 3 in IT. "My code was live within a month."</li>
+<li><b>Tom Walsh</b> - BSc Computing, moved from retail. "By week three I fixed a real bug."</li>
+<li><b>Priya Nair</b> - T Level in Digital Production. "Nobody minds a question here."</li>
+</ul>
+
+<h2 id="jobs">Jobs and qualifications</h2>
+<table>
+<tr><th>Job</th><th>Qualifications needed</th></tr>
+<tr><td>Junior Web Developer</td><td>Level 3 qualification or degree in a web or computing subject. HTML, CSS and basic JavaScript.</td></tr>
+<tr><td>Front-End Trainee</td><td>A web development qualification and a portfolio of two projects. JavaScript.</td></tr>
+<tr><td>Full-Stack Trainee</td><td>Degree, HNC/HND or equivalent in computing. JavaScript or PHP, and SQL.</td></tr>
+</table>
+
+<h2 id="apply">Apply online</h2>
+<form id="f" novalidate>
+<p>Name:<br><input type="text" id="n"></p>
+<p>Email:<br><input type="email" id="e"></p>
+<p>Job:<br><select id="j"><option value="">Choose a job</option><option>Junior Web Developer</option><option>Front-End Trainee</option><option>Full-Stack Trainee</option></select></p>
+<p>Qualification:<br><input type="text" id="q"></p>
+<p>Why do you want to work here?<br><textarea id="c" rows="4" cols="40"></textarea></p>
+<p id="msg" role="alert"></p>
+<button type="submit">Send application</button>
+</form>
+
+<h2 id="courses">Web development courses</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development">MDN: Learn web development</a></li>
+<li><a href="https://www.freecodecamp.org/">freeCodeCamp</a></li>
+<li><a href="https://www.theodinproject.com/">The Odin Project</a></li>
+<li><a href="https://www.w3schools.com/">W3Schools</a></li>
+</ul>
+<hr>
+<p align="center"><small>Webexe, careers@webexe.example</small></p>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(ev){
+  ev.preventDefault();
+  var m=document.getElementById('msg'),n=document.getElementById('n').value.trim();
+  if(!n||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(document.getElementById('e').value)||!document.getElementById('j').value){
+    m.textContent='Please enter your name, a valid email and choose a job.';return}
+  m.textContent='Thank you, '+n+'. Your application has been received.';
+  this.reset();
+});
+</script>
+</body>
+</html>
