@@ -3,11 +3,15 @@
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font:18px/1.6 Karla,Arial,sans-serif;max-width:720px;margin:0 auto;padding:16px 14px 40px;text-align:center}
 h1,h2{font-family:"Archivo Black",Impact,sans-serif;font-weight:400;text-transform:uppercase}
-h1{font-size:clamp(2.3rem,9vw,3.8rem);line-height:1;margin:.4em 0 .2em}
-h1::after{content:"";display:block;height:10px;width:120px;margin:12px auto 0;background:var(--acc)}
-h2{font-size:1.4rem;display:inline-block;color:var(--ink);padding:0 0 4px;border-bottom:5px solid var(--acc);margin:1.6em 0 .6em}
+.brand{display:block;margin:0}
+.logo{display:block;width:min(360px,80%);height:auto;margin:0 auto;mix-blend-mode:multiply}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo{mix-blend-mode:normal;background:#fff;border-radius:8px}}
+h1,h2{font-size:1.4rem;display:inline-block;color:var(--ink);padding:0 0 4px;border-bottom:5px solid var(--acc);margin:1.6em 0 .6em}
 a{color:var(--link);font-weight:700;text-underline-offset:3px}
-p[align="center"] a{margin:0 4px}
+h1{font-size:1.8rem}
+nav{margin:14px 0}
+nav a{display:inline-block;margin:4px 8px}
+nav a[aria-current="page"]{color:var(--ink);text-decoration:none;border-bottom:3px solid var(--acc)}
 hr{border:0;border-top:3px dashed var(--ink);margin:22px 0}
 ul{list-style:none;padding:0}
 li{margin:.6em 0}
