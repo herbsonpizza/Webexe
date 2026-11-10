@@ -24,3 +24,6 @@ input:focus,select:focus,textarea:focus,button:focus-visible{outline:3px solid v
 button{font:15px "Archivo Black",Impact,sans-serif;text-transform:uppercase;padding:10px 22px;background:var(--acc);color:#1b1b1b;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);cursor:pointer}
 button:active{transform:translate(4px,4px);box-shadow:none}
 #msg{font-weight:700;color:var(--acc2)}
+.btn{display:inline-block;font:15px "Archivo Black",Impact,sans-serif;text-transform:uppercase;text-decoration:none;padding:12px 24px;background:var(--acc);color:#1b1b1b;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.btn:active{transform:translate(4px,4px);box-shadow:none}
+.btn:focus-visible{outline:3px solid var(--acc);outline-offset:2px}

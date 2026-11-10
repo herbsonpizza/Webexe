@@ -23,29 +23,12 @@
 
 <main>
 <h1>Apply online</h1>
-<form id="f" novalidate>
-<p>Name:<br><input type="text" id="n"></p>
-<p>Email:<br><input type="email" id="e"></p>
-<p>Job:<br><select id="j"><option value="">Choose a job</option><option>Junior Web Developer</option><option>Front-End Trainee</option><option>Full-Stack Trainee</option></select></p>
-<p>Qualification:<br><input type="text" id="q"></p>
-<p>Why do you want to work here?<br><textarea id="c" rows="4" cols="40"></textarea></p>
-<p id="msg" role="alert"></p>
-<button type="submit">Send application</button>
-</form>
+<p>Ready to join the team? Fill in our online application form. It opens in a new tab.</p>
+<p><a class="btn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=_j_KcdCNmEqH7icfHn5_ZfipTa8jDkZPuZbFqHta7xtURE9HQVVFVzlPUUJPSlRaMEVCSTlBWVVLRC4u" target="_blank" rel="noopener noreferrer">Webexe Application &ndash; Fill in form</a></p>
 </main>
 
 <hr>
 <footer><p><small>Webexe, careers@webexe.example</small></p></footer>
 
-<script>
-document.getElementById('f').addEventListener('submit',function(ev){
-  ev.preventDefault();
-  var m=document.getElementById('msg'),n=document.getElementById('n').value.trim();
-  if(!n||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(document.getElementById('e').value)||!document.getElementById('j').value){
-    m.textContent='Please enter your name, a valid email and choose a job.';return}
-  m.textContent='Thank you, '+n+'. Your application has been received.';
-  this.reset();
-});
-</script>
 </body>
 </html>
